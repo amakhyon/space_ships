@@ -23,7 +23,11 @@ First a pyramid is drawn by drawing four different triangles in 3D space, then t
 
 Implementation
 It was elementary that in order to produce all the falling diamonds and have collision detection at the same time, the diamonds had to be aware of both player’s positions all the time and to do that it had to be made into a class and later generate objects from it, these objects would then generate a few random aspects including: x-position, size, falling and speed then a few collision detection metrics had to be taken into consideration like when the diamond reaches the bottom of the screen it respawns up, and whenever it touches a player it also respawns up in the maximum Y coordinates, testing were done to get the right ranges of these random numbers that allows the game to be playable.
+
+
 Collision detection in diamonds was implanted by using equations of opposite corners of an imaginary rectangle around each diamond and if a player is anywhere within that rectangle, an event is fired and suitable measures are taken.
+
 Winning states, inorder to achieve them there was 2 flags, each one belonged to each player and it represented if that player won or not, if no one won yet then the game loop will continue rendering the game scene, if a player won however, a different winning screen will be shown and the game will no longer be rendered.
+
 Scenery, after all objects were rendered, a screen-wide rectangle is generated with the dark blue to black gradient mimicking a sky as background, and random white points are generated presenting stars. 
 
